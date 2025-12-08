@@ -1,7 +1,7 @@
 from .base import *
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -30,7 +30,7 @@ DATABASES = {
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # For production
 
 # cors settings
 CORS_ALLOWED_ORIGINS = []  # list of domain names that are to be allowed
@@ -44,7 +44,7 @@ CORS_ALLOW_CREDENTIALS = True
 # Redirect all HTTP → HTTPS
 SECURE_SSL_REDIRECT = True
 # Trust SSL from reverse proxy (Nginx, Load Balancer)
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # HSTS — enable only after HTTPS confirmed working. Protects against protocol-downgrade & MITM attacks
 SECURE_HSTS_SECONDS = 3600  # 1 hour

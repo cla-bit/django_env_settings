@@ -22,13 +22,13 @@ from loggings import LOGGING as BASE_LOGGING
 
 # Application definition
 DJANGO_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.sites",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
 ]
 MY_APPS = []  # list of apps you created
 THIRD_PARTY_APPS = []  # lists of third party apps or libraries
@@ -36,16 +36,16 @@ THIRD_PARTY_APPS = []  # lists of third party apps or libraries
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS  # add the lists of apps
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',  # add your middlewares
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",  # add your middlewares
 ]
 
-ROOT_URLCONF = 'settings.urls'  # where the project urls.py is
+ROOT_URLCONF = "settings.urls"  # where the project urls.py is
 
 # Logging setting
 LOGGING = BASE_LOGGING
@@ -53,20 +53,20 @@ LOGGING = BASE_LOGGING
 # if there is need for template
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'settings.wsgi.application'  # where the wsgi.py file is
+WSGI_APPLICATION = "settings.wsgi.application"  # where the wsgi.py file is
 
 
 # Password validation
@@ -74,16 +74,16 @@ WSGI_APPLICATION = 'settings.wsgi.application'  # where the wsgi.py file is
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -91,9 +91,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -103,23 +103,29 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Email settings - If not using a third party email provider configuration
 # Use 'django.core.mail.backends.smtp.EmailBackend' to use SMTP Backend
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # The backend to use for sending emails
-EMAIL_HOST = os.getenv('EMAIL_HOST')  # The host to send the email
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Username to use for the SMTP server
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Password to use for the SMTP server
-EMAIL_PORT = os.getenv('EMAIL_PORT')  # Port to use for the SMTP server. Use 587 for TLS and 465 for SSL
+EMAIL_HOST = os.getenv("EMAIL_HOST")  # The host to send the email
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")  # Username to use for the SMTP server
+EMAIL_HOST_PASSWORD = os.getenv(
+    "EMAIL_HOST_PASSWORD"
+)  # Password to use for the SMTP server
+EMAIL_PORT = os.getenv(
+    "EMAIL_PORT"
+)  # Port to use for the SMTP server. Use 587 for TLS and 465 for SSL
 EMAIL_USE_TLS = True  # Set to False if EMAIL_USE_SSL is True
 EMAIL_USE_SSL = False  # set to True if EMAIL_USE_TLS is False
-EMAIL_USE_LOCALTIME = False  # Set to True if you want to use local time zone instead of UTC
+EMAIL_USE_LOCALTIME = (
+    False  # Set to True if you want to use local time zone instead of UTC
+)
