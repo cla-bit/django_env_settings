@@ -31,7 +31,7 @@ restframework applications especially when deploying to a production environment
 ```text
 
 └── root/
-    ├── loggings/  # implements logging for the various environments
+    ├── loggings/  # logging for the various environments
     │   ├── __init__.py
     │   ├── base.py
     │   ├── local.py
@@ -40,20 +40,21 @@ restframework applications especially when deploying to a production environment
     ├── manage.py
     ├── pyproject.toml
     ├── ruff.toml  # linting
-    └── settings/
-        ├── libs_config/  # directory for third-party libraries such as celery
-        │   └── __init__.py
-        ├── __init__.py
-        ├── asgi.py
-        ├── env.py
-        ├── urls.py
-        ├── wsgi.py
-        └── config/  # django configuration directory
-            ├── __init__.py
-            ├── base.py
-            ├── local.py
-            ├── production.py
-            └── staging.py
+    ├── settings/
+    │   ├── libs_config/  # directory for third-party libraries such as celery
+    │   │   └── __init__.py
+    │   ├── __init__.py
+    │   ├── asgi.py
+    │   ├── env.py
+    │   ├── urls.py
+    │   ├── wsgi.py
+    │   └── config/  # django configuration directory
+    │       ├── __init__.py
+    │       ├── base.py
+    │       ├── local.py
+    │       ├── production.py
+    │       └── staging.py
+    └── requirements.txt
 
 ```
 
@@ -78,7 +79,7 @@ python -m venv <your_venv>
 ```
 > **NOTE**
 > 
-> If using linux/MacOS based terminals, use "python3".
+> If using linux/MacOS terminal, use "python3".
 
 - Activate your virtual environment
 
@@ -86,7 +87,7 @@ python -m venv <your_venv>
 <your_venv>\Scripts\activate
 ```
 
-*Linux/MacOS terminals*
+*Linux/MacOS terminal*
 ```shell
 source <your_venv>/bin/activate
 ```
