@@ -9,6 +9,7 @@ DEBUG = False
 # add this in the ALLOWED_HOSTS
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
+SITE_ID = 3
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -27,6 +28,9 @@ DATABASES = {
     }
 }
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.2/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production
 
 # cors settings
 CORS_ALLOWED_ORIGINS = []  # list of domain names that are to be allowed
