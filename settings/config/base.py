@@ -129,3 +129,4 @@ EMAIL_USE_SSL = False  # set to True if EMAIL_USE_TLS is False
 EMAIL_USE_LOCALTIME = (
     False  # Set to True if you want to use local time zone instead of UTC
 )
+DEFAULT_FROM_EMAIL = "no-reply@yourdomain.com"
